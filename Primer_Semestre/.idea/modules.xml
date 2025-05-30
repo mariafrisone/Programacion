@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Clase1/Clase1.iml" filepath="$PROJECT_DIR$/Clase1/Clase1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase10/Clase10.iml" filepath="$PROJECT_DIR$/Clase10/Clase10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase2/Clase2.iml" filepath="$PROJECT_DIR$/Clase2/Clase2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase3/Clase3.iml" filepath="$PROJECT_DIR$/Clase3/Clase3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase4/Clase4.iml" filepath="$PROJECT_DIR$/Clase4/Clase4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase5/Clase5.iml" filepath="$PROJECT_DIR$/Clase5/Clase5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase6/Clase6.iml" filepath="$PROJECT_DIR$/Clase6/Clase6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase7/Clase7.iml" filepath="$PROJECT_DIR$/Clase7/Clase7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase8/Clase8.iml" filepath="$PROJECT_DIR$/Clase8/Clase8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clase9/Clase9.iml" filepath="$PROJECT_DIR$/Clase9/Clase9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Primer_Semestre.iml" filepath="$PROJECT_DIR$/Primer_Semestre.iml" />
+    </modules>
+  </component>
+</project>
