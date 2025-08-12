@@ -249,6 +249,7 @@ public class Main {
         static void mostrarVentas(Scanner scanner){
                 for (Venta listado : ventas)
                     listado.listadoVentas();
+
         }
         static void mostrarClientes() {
             for (Cliente listado : clientes)

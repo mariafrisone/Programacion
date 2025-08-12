@@ -23,7 +23,14 @@ public class Venta {
     public double getTotal() {return total;}
 
     public void listadoVentas(){
-        System.out.println("\n Cliente: " + this.cliente + "\n Fecha de la venta: " + this.fecha);
+        System.out.println("\n Cliente: " + this.cliente.getNombre() + "("+this.cliente.getDni() + ")");
+        System.out.println("\n Fecha de la venta: " + this.fecha);
+        System.out.println("Productos: ");
+        for (Producto producto : this.lineasDeVenta){
+            System.out.println("\nID mueble: " + producto.getId() + "\nModelo: " + producto.getModelo() + "\nMaterial: " + producto.getMaterial() +
+                    "\nColor: " + producto.getColor() + "\nPrecio: " + producto.getPrecio() + "€");
+        }
+        System.out.println("Total: " + this.total + "€");
     }
 
     private double calcularTotal(){
