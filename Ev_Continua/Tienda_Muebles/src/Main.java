@@ -1,4 +1,5 @@
-
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.HashMap;
@@ -47,6 +48,7 @@ public class Main {
                 System.out.println("5. Listado");
                 System.out.println("6. Volver");
 
+
                 System.out.println("Elige una opción: ");
                 op = scanner.nextInt();
                 scanner.nextLine();
@@ -54,6 +56,7 @@ public class Main {
                 switch (op) {
                     case 1 -> {
                         String respuesta;
+
                         do {
                             System.out.println("Nombre: ");
                             String nombre = scanner.nextLine();
@@ -75,14 +78,21 @@ public class Main {
                     }
                     case 2 -> {
                             mostrarClientes();
-                            System.out.println("\n Cliente que deseas eliminar: ");
-                            int pos = scanner.nextInt();
-                            if (pos >= 0 && pos < clientes.size()) clientes.remove(pos);
-                            System.out.println("El cliente se ha borrado con éxito");
+
+                            System.out.println("\n DNI del cliente que deseas eliminar: ");
+                            String dniBaja = scanner.nextLine();
+                            Cliente clienteEliminado = mapaClientes.remove(dniBaja);
+                            if (clienteEliminado != null){
+                                clientes.remove(clienteEliminado);
+                                System.out.println("El cliente se ha borrado con éxito");
+                            }else{
+                                System.out.println("El número de DNI no es correcto");
+                            }
                     }
                     case 3 -> {
                         mostrarClientes();
-                        System.out.println("\n Cliente que deseas modificar: ");
+
+                        System.out.println("\n DNI del cliente que deseas modificar: ");
                         String dniCliente = scanner.nextLine();
                         Cliente clienteModificar = mapaClientes.get(dniCliente);
 
@@ -220,19 +230,21 @@ public class Main {
             }while (respuesta.equalsIgnoreCase("s"));
 
             if (!productosVenta.isEmpty()){
-                System.out.println("\nIntroduce la fecha de la venta: ");
-                String fechaVenta = scanner.nextLine();
+
+                LocalDate fechaVenta = LocalDate.now();
 
                 Venta nuevaVenta = new Venta(fechaVenta, clienteSeleccionado, productosVenta);
                 ventas.add(nuevaVenta);
 
                 System.out.println("\n ¡Venta creada con éxito!");
-                System.out.println("Cliente: " + nuevaVenta.getCliente().getNombre());
+                System.out.println("Datos del cliente: " );
+                nuevaVenta.getCliente().verInfo();
+                System.out.println("Fecha de la venta: " + nuevaVenta.getFecha().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
                 System.out.println("Total de la venta: " + nuevaVenta.getTotal() + "€");
+
             }else {
                 System.out.println("\n Venta cancelada, no se añadieron productos");
             }
-            scanner.close();
         }
         static void mostrarVentas(Scanner scanner){
                 for (Venta listado : ventas)

@@ -1,13 +1,14 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Venta {
 
     private Cliente cliente;
-    private String fecha;
+    private LocalDate fecha;
     private ArrayList<Producto> lineasDeVenta;
     private double total;
 
-    public Venta(String fecha, Cliente cliente, ArrayList<Producto> lineasDeVenta) {
+    public Venta(LocalDate fecha, Cliente cliente, ArrayList<Producto> lineasDeVenta) {
         this.cliente = cliente;
         this.fecha = fecha;
         this.lineasDeVenta = lineasDeVenta;
@@ -15,7 +16,7 @@ public class Venta {
     }
     public Cliente getCliente() {return cliente;}
 
-    public String getFecha() {return fecha;}
+    public LocalDate getFecha() {return fecha;}
 
     public ArrayList<Producto> getLineasDeVenta() {return lineasDeVenta;}
 
