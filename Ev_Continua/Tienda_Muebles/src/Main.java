@@ -232,7 +232,7 @@ public class Main {
             }else {
                 System.out.println("\n Venta cancelada, no se añadieron productos");
             }
-
+            scanner.close();
         }
         static void mostrarVentas(Scanner scanner){
                 for (Venta listado : ventas)
@@ -246,5 +246,4 @@ public class Main {
         for (Producto listado : productos)
             listado.verDetalle();
         }
-
 }
