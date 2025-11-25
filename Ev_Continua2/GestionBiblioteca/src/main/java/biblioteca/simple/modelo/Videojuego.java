@@ -5,18 +5,18 @@ import biblioteca.simple.contratos.Prestable;
 public class Videojuego extends Producto implements Prestable{
 
     private String genero;
-    private int version;
+    private double version;
 
     private boolean prestado;
     private Usuario prestadoA;
 
-    public Videojuego(int id, String titulo, String anho, Formato formato, String genero, int version) {
+    public Videojuego(int id, String titulo, String anho, Formato formato, String genero, double version) {
         super(id, titulo, anho, formato);
         this.genero = genero;
         this.version = version;
     }
 
-    public Videojuego(String titulo, String anho, Formato formato, String genero, int version){
+    public Videojuego(String titulo, String anho, Formato formato, String genero, double version){
         super(titulo, anho, formato);
         this.genero = genero;
         this.version = version;
@@ -26,7 +26,7 @@ public class Videojuego extends Producto implements Prestable{
         return genero;
     }
 
-    public int getVersion() {
+    public double getVersion() {
         return version;
     }
 
@@ -42,7 +42,7 @@ public class Videojuego extends Producto implements Prestable{
     @Override
     public String toString() {
         return  "Videojuego{" +
-                ", genero=" + genero +
+                "genero=" + genero +
                 ", version=" + version +
                 ", formato=" + formato +
                 ", anho='" + anho + '\'' +

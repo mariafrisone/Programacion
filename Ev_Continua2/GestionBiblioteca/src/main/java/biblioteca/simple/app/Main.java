@@ -26,8 +26,10 @@ public class Main {
     private static void cargarDatos(){
         catalogo.alta(new Libro(1, "El Quijote", "1608", Formato.FISICO, "25225", "Cervantes"));
         catalogo.alta(new Libro(2, "El nombre del viento", "2007", Formato.FISICO, "9788401352836", "Patrick Rothfuss"));
-        catalogo.alta(new Pelicula(3, "El Padrino", "1972", Formato.FISICO, "rancis Ford Coppola", 175));
+        catalogo.alta(new Pelicula(3, "El Padrino", "1972", Formato.FISICO, "Francis Ford Coppola", 175));
         catalogo.alta(new Pelicula(4, "Parásitos", "2019", Formato.FISICO, "Bong Joon-ho", 132));
+        catalogo.alta(new Videojuego(5, "The Legend of Zelda: Breath of the Wild", "2017", Formato.FISICO, "Aventura", 1.6));
+        catalogo.alta(new Videojuego(6, "The Last of Us Part II", "2020", Formato.FISICO, "Acción", 1.0));
 
         usuarios.add(new Usuario(1, "Juan"));
         usuarios.add(new Usuario(2, "María"));
